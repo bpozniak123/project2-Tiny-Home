@@ -1,0 +1,12 @@
+<%- include('./partials/header.ejs') %>
+	<h1>New Tiny House</h1>
+
+	<form action="/tiny" method="POST"> 
+		Type: <input type="text" name="name"> <br/>
+		Bedrooms: <input type="text" name="name"> <br/>
+		Bathroom: <input type="text" name="name"> <br/>
+		Budget: <input type="text" name="name"> <br/>
+
+		<input type="submit" name="Create House" value='Create House' />
+	</form>
+<%- include('./partials/footer.ejs') %> 

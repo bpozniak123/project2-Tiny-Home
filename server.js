@@ -24,6 +24,7 @@ db.on('disconnected', () => {console.log('mongo disconnected') })
 // MIDDLEWARES
 // This will parse the data and create the "req.body object"
 app.use(express.urlencoded({extended: true}))
+app.use(express.static('public'))
 
 //method override
 // This will allow us to make DELETE and PUT requests
