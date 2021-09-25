@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Index</title>
+</head>
+<body>
+	<h1>Tiny Home Index</h1>
+	<ul>
+		<% for (let i = 0; i < tinyHome.length; i++) {%>
+		<li>
+			<a href="/tiny/<%= tinyHome[i].id %>"> <%= tinyHome[i].type %> </a>
+			<a href="/tiny/<%= tinyHome[i].id %>/edit">EDIT</a>
+			
+
+		</li>
+
+
+		<% } %>
+	</ul>
+
+</body>
+</html>
