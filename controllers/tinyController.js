@@ -31,7 +31,9 @@ router.get('/', (req,res) => {
 })
 
 //NEW
-
+router.get('/new', (req,res) => {
+	res.render('new.ejs')
+})
 
 //SHOW
 router.get('/:id', (req,res) => {
@@ -41,5 +43,22 @@ router.get('/:id', (req,res) => {
 	})
 })
 
+//POST
+router.post('/', (req,res) => {
+	Tiny.create(req.body, (error, createdTiny) => {
+		if(error){
+			console.log(error)
+			res.send(error)
+		} else{
+			console.log(createdTiny)
+			res.redirect('/tiny')
+		}
+	})
+})
+
+//DELETE
+
+
+//EDIT
 
 module.exports = router
