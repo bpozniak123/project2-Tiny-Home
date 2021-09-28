@@ -10,7 +10,23 @@ router.get('/seed', async (req, res) => {
         img: '../img/aFrame.jpeg',
          bedrooms: 2,
         bathrooms: 1,
-        budget:12000,
+        budget:20000,
+      },
+      {
+        type: 'Traditional Model',
+        description: 'Enjoy a minimalist lifestyle in an elegant traditional tiny home! You have ability to customize to a specific location or have the ability to re-locate, including your specific touch and design.',
+        img: '../img/TinyHome.jpeg',
+         bedrooms: 1,
+        bathrooms: 1,
+        budget:15000,
+      },
+        {
+        type: 'Shipping Container Model',
+        description: 'Install and build a custom prefab shipping container structure for less! The metal structure will last long, provide a cool industrial look and feel, while keeping the cost to build lower vs. a traditional home!',
+        img: '../img/ship2.jpeg',
+         bedrooms: 1,
+        bathrooms: 1,
+        budget:15000,
       }
 	], (err,data) => {
 		if (err) {
@@ -57,8 +73,47 @@ router.post('/', (req,res) => {
 })
 
 //DELETE
-
+router.delete('/:id', (req,res) => {
+	Tiny.findByIdAndDelete(req.params.id, (err, deleteTiny) => {
+		if (err) {
+			console.log(err)
+			res.send(err)
+		} else {
+			res.redirect('/tiny')
+		}
+	})
+})
 
 //EDIT
+router.get('/:id/edit', (req,res) => {
+	Tiny.findById(req.params.id, (err, findTiny) => {
+		if (err) {
+			console.log(err)
+			res.send(err)
+		} else {
+			res.render('edit.ejs', {
+				tiny: findTiny,
+			})
+		}
+	})
+})
+
+router.put('/:id', (req,res) => {
+	Tiny.findByIdAndUpdate(
+		req.params.id, 
+		req.body,
+		{
+			new: true,
+		},
+		(err, updatedTiny) => {
+		if (err) {
+			console.log(err)
+			res.send(err)
+		} else {
+			res.redirect('/tiny')
+		}
+		})
+})
+
 
 module.exports = router

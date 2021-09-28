@@ -9,7 +9,10 @@
 				"<%= tinyHome[i].description %>"<br>
 		</li>
 		<a href="/tiny/<%= tinyHome[i].id %>/edit">EDIT</a><br>
-
+	
+	<form action="/tiny/<%= tinyHome[i].id %>?_method=DELETE" method="POST">
+		<input type="submit" value="Delete" name="type">
+	</form>
 		<% } %>
 	</ul>
 <%- include('./partials/footer.ejs') %>
