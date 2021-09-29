@@ -34,6 +34,6 @@ app.use(methodOverride('_method'))
 const tinyController = require('./controllers/tinyController')
 app.use('/tiny', tinyController)
 
-app.listen(process.env.PORT || 3000 => {
+app.listen(process.env.PORT || 3000,() => {
 	console.log(`Server is listening on PORT 3k`)
 })
