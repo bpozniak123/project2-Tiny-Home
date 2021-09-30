@@ -1,8 +1,20 @@
 <%- include('./partials/header.ejs') %>
 	<h1>New Tiny House</h1>
 
-	<form action="/tiny" method="POST"> 
-		Type: <input type="text" name="type"> <br/>
+	<form action="/tiny" method="POST"> <label for="tiny-select">Choose a Home Type:</label>
+
+		<select name="tinyHome" id="tiny-select">
+    		<option value="">--Please choose an option--</option>
+    		<option value="aframe">A Frame Tiny Home</option>
+   		 	<option value="traditional">Traditional Tiny Home</option>
+    		<option value="shipping">Shipping Container Tiny Home</option>
+    		<option value="largeBus">Large Size Bus</option>
+    		<option value="mediumBus">Medium Size Bus</option>
+    		<option value="smallBus">Small Bus</option>
+    		<option value="largeVan">Large Size Van</option>
+    		<option value="mediumVan">Medium Size Van</option>
+    		<option value="smallVan">Small Van</option>
+		</select><br/>
 		Bedrooms: <input type="number" name="bedrooms"> <br/>
 		Bathrooms: <input type="number" name="bathrooms"> <br/>
 		Budget: <input type="number" name="budget"> <br/>
