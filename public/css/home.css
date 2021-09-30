@@ -1,6 +1,6 @@
 body {
 	/*background-color: brown;*/
-	background-image: url(../img/background.jpeg);
+	background-image: url(../img/homepage/background2.jpeg);
 	background-size: cover;
 	background-repeat: no-repeat;
 	/*background-position: center;*/
@@ -9,11 +9,10 @@ body {
 h1{
 	color: white;
 	text-align: center;
+	background-color: black;
 }
-li{
-	color: white;
-	list-style-type: none;
-}
-a{
-	color: white;
+
+.homeVan{
+	background-color: black;
+	border-radius: inherit;
 }

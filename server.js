@@ -34,6 +34,11 @@ app.use(methodOverride('_method'))
 const tinyController = require('./controllers/tinyController')
 app.use('/tiny', tinyController)
 
+//HOME ROUTE
+app.get('/', (req,res) =>{
+	res.render('home.ejs')
+})
+
 app.listen(process.env.PORT || 3000,() => {
 	console.log(`Server is listening on PORT 3k`)
 })
