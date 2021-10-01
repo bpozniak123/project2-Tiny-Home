@@ -8,10 +8,10 @@
 		
 				"<%= tinyHome[i].description %>"<br>
 		</li>
-		<a href="/tiny/<%= tinyHome[i].id %>/edit"><button>EDIT</button></a><br>
+		<a href="/tiny/<%= tinyHome[i].id %>/edit"><button class="btn btn-warning">EDIT</button></a><br>
 
 	<form action="/tiny/<%= tinyHome[i].id %>?_method=DELETE" method="POST">
-		<input type="submit" value="Delete" name="type">
+		<button type="submit" class="btn btn-danger">DELETE</button>
 	</form><br>
 		<% } %>
 	</ul>

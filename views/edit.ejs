@@ -1,7 +1,8 @@
 <%- include('./partials/header.ejs') %>
-	<h1>Edit Your Tiny Home Model</h1>
+	<h1>Edit Tiny Home Model</h1>
 
-	<form action="/tiny/<%= tiny.id %>?_method=PUT" method="POST"> 
+	<div class="editFormDiv"> 
+	<form class="editForm" action="/tiny/<%= tiny.id %>?_method=PUT" method="POST"> 
 		Type: 
 		<input 
 			type="text" 
@@ -19,14 +20,14 @@
 			type="number" 
 			name="bathrooms"
 			value="<%= tiny.bathrooms %>"> 
-		><br/>
+		<br/>
 		Budget: 
 		<input 
 			type="number" 
 			name="budget"
 			value="<%= tiny.budget %>"> 
-		><br/>
-		<input type="submit" name="Update Tiny Home" value='Update Home'/>
+		<br/>
+		<button type="submit" class="btn btn-warning">Update Model</button>
 	</form>
-	
+	</div>
 <%- include('./partials/footer.ejs') %> 

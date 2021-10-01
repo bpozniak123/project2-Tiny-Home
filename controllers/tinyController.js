@@ -41,16 +41,16 @@ router.get('/seed', async (req, res) => {
         class: 'bus',
       },
        {
-        type: 'Medium Size Bus Model',
+        type: 'Mid Size Bus Model',
         description: 'Another great bus option with a little bit more room for storage or company!',
-        img: '../img/busMedium.jpeg',
+        img: '../img/busMid.jpeg',
          bedrooms: 1,
         bathrooms: 1,
         budget:60000,
         class:'bus',
       },
        {
-        type: 'Small Bus Model',
+        type: 'Small Size Bus Model',
         description: 'Create your own home on wheels, big enough to live but small enough to maneuver narrow trails!',
         img: '../img/busMini.jpeg',
          bedrooms: 1,
@@ -68,7 +68,7 @@ router.get('/seed', async (req, res) => {
         class:'van',
       },
        {
-        type: 'Medium Size Van Model',
+        type: 'Mid Size Van Model',
         description: 'Another intermediate size van option- providing similar options as the full size van or smaller bus options. However, an added benefit is the functionality around driving and trails adventure.',
         img: '../img/vanMedium.jpeg',
          bedrooms: 1,
@@ -77,7 +77,7 @@ router.get('/seed', async (req, res) => {
         class:'van',
       },
        {
-        type: 'Small Van Model',
+        type: 'Small Size Van Model',
         description: 'Our smallest option with the same action packed options for both, comfort and exploring. Check out our small van with a full bed, full kitchen, and functional bath!',
         img: '../img/vanMini.jpeg',
          bedrooms: 1,
@@ -89,7 +89,7 @@ router.get('/seed', async (req, res) => {
 		if (err) {
 			console.log(err)
 		}
-		res.redirect('/tiny')
+		res.redirect('/')
 	})
 })
 
@@ -136,7 +136,7 @@ router.post('/', (req,res) => {
 			res.send(error)
 		} else{
 			console.log(createdTiny)
-			res.redirect('/tiny')
+			res.redirect('/')
 		}
 	})
 })
@@ -148,7 +148,7 @@ router.delete('/:id', (req,res) => {
 			console.log(err)
 			res.send(err)
 		} else {
-			res.redirect('/tiny')
+			res.redirect('/')
 		}
 	})
 })
@@ -179,7 +179,7 @@ router.put('/:id', (req,res) => {
 			console.log(err)
 			res.send(err)
 		} else {
-			res.redirect('/tiny')
+			res.redirect('/')
 		}
 		})
 })
