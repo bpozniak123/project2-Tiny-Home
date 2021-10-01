@@ -11,6 +11,7 @@ router.get('/seed', async (req, res) => {
          bedrooms: 2,
         bathrooms: 1,
         budget:140000,
+        class: 'house',
       },
         {
         type: 'Shipping Container Model',
@@ -19,6 +20,7 @@ router.get('/seed', async (req, res) => {
          bedrooms: 1,
         bathrooms: 1,
         budget:100000,
+        class: 'house',
       },
       {
         type: 'Traditional Model',
@@ -27,6 +29,7 @@ router.get('/seed', async (req, res) => {
          bedrooms: 1,
         bathrooms: 1,
         budget:70000,
+        class: 'house',
       },
         {
         type: 'Full Size Bus Model',
@@ -35,6 +38,7 @@ router.get('/seed', async (req, res) => {
          bedrooms: 1,
         bathrooms: 1,
         budget:90000,
+        class: 'bus',
       },
        {
         type: 'Medium Size Bus Model',
@@ -43,6 +47,7 @@ router.get('/seed', async (req, res) => {
          bedrooms: 1,
         bathrooms: 1,
         budget:60000,
+        class:'bus',
       },
        {
         type: 'Small Bus Model',
@@ -51,6 +56,7 @@ router.get('/seed', async (req, res) => {
          bedrooms: 1,
         bathrooms: 1,
         budget:40000,
+        class:'bus',
       },
        {
         type: 'Full Size Van Model',
@@ -59,6 +65,7 @@ router.get('/seed', async (req, res) => {
          bedrooms: 1,
         bathrooms: 1,
         budget:70000,
+        class:'van',
       },
        {
         type: 'Medium Size Van Model',
@@ -67,6 +74,7 @@ router.get('/seed', async (req, res) => {
          bedrooms: 1,
         bathrooms: 1,
         budget:50000,
+        class:'van',
       },
        {
         type: 'Small Van Model',
@@ -75,6 +83,7 @@ router.get('/seed', async (req, res) => {
          bedrooms: 1,
         bathrooms: 1,
         budget:30000,
+        class:'van',
       }
 	], (err,data) => {
 		if (err) {
@@ -85,12 +94,24 @@ router.get('/seed', async (req, res) => {
 })
 
 //INDEX 
-router.get('/', (req,res) => {
-	Tiny.find({}, (err, allTiny) => {
+router.get('/house', (req,res) => {
+	Tiny.find({class:'house'}, (err, allTiny) => {
 		console.log(allTiny)
-		res.render('index.ejs', {
-			tinyHome: allTiny
-		})
+		res.render('house.ejs',{tinyHome: allTiny})
+	})
+})
+
+router.get('/bus', (req,res) => {
+	Tiny.find({class:'bus'}, (err, allTiny) => {
+		console.log(allTiny)
+		res.render('bus.ejs',{tinyHome: allTiny})
+	})
+})
+
+router.get('/van', (req,res) => {
+	Tiny.find({class:'van'}, (err, allTiny) => {
+		console.log(allTiny)
+		res.render('van.ejs',{tinyHome: allTiny})
 	})
 })
 

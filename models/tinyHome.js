@@ -8,6 +8,7 @@ const tinyHomeSchema = new Schema({
 	bedrooms: {type: Number, required: true},
 	bathrooms: {type: Number, required: true},
 	budget: {type: Number, required: true},
+	class: {type: String, required:true}
 })
 
 const Tiny = model ('Tiny', tinyHomeSchema)

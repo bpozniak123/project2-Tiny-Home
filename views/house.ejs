@@ -1,0 +1,18 @@
+<%- include('./partials/header.ejs') %>
+	<h1>House Index</h1>
+	<ul>
+		<% for (let i = 0; i < tinyHome.length; i++) {%>
+		<li>
+			<img src="<%= tinyHome[i].img%>"><br>
+			<a href="/tiny/<%= tinyHome[i].id %>"> <%= tinyHome[i].type %> </a><br>
+		
+				"<%= tinyHome[i].description %>"<br>
+		</li>
+		<a href="/tiny/<%= tinyHome[i].id %>/edit"><button>EDIT</button></a><br>
+
+	<form action="/tiny/<%= tinyHome[i].id %>?_method=DELETE" method="POST">
+		<input type="submit" value="Delete" name="type">
+	</form><br>
+		<% } %>
+	</ul>
+<%- include('./partials/footer.ejs') %>
