@@ -22,17 +22,18 @@ h1{
 	text-align: center;
 	color: white;
 	padding: 15px 55px;
-	text-shadow: 3px 3px 6px yellow;
+	text-shadow: 3px 3px 6px orange;
 	margin-left: auto;
 	margin-right: auto;
 	width: 70%;
-	background: rgba(0, 0, 0, 0.5);
+	background: rgba(0, 0, 0, 0.6);
 	border-radius: 20%;
 }
 
 .wrapper{
 	display: grid;
 	grid-template-columns: .5fr .5fr .5fr;
+	position: relative;
 }
 
 .homeHouse{
@@ -47,12 +48,18 @@ h1{
 .homeVan{
 	background-color: black;
 	border-radius: inherit;
-	border-radius: 70%;
+	border-radius: 50%;
 	padding: 20px;
 	margin-top: 70px;
 }
 
 .btnHomepage{
 	background-color: black;
-	color: lightgreen;
+	color: orange;
+	padding: 10px;
+	box-shadow: 6px 5px orange;
+	margin-left: 50px;
+  	position: absolute;
+  	top: 95%;
+}
 }
