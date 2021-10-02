@@ -47,13 +47,12 @@ h1{
 
 .homeVan{
 	background-color: black;
-	border-radius: inherit;
 	border-radius: 50%;
-	padding: 20px;
-	margin-top: 70px;
+	padding: 70px 40px;
+	margin-top: 45px;
 }
 
-.btnHomepage{
+#btnHomeHouse{
 	background-color: black;
 	color: orange;
 	padding: 10px;
@@ -62,4 +61,23 @@ h1{
   	position: absolute;
   	top: 95%;
 }
+
+#btnHomeBus{
+	background-color: black;
+	color: orange;
+	padding: 10px;
+	box-shadow: 6px 5px orange;
+	margin-left: 220px;
+  	position: absolute;
+  	top: 95%;
+}
+
+#btnHomeVan{
+	background-color: black;
+	color: orange;
+	padding: 10px;
+	box-shadow: 6px 5px orange;
+	margin-left: 180px;
+  	position: absolute;
+  	top: 95%;
 }
